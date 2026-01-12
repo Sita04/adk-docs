@@ -2,6 +2,9 @@ name: PR Preview
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed, labeled, unlabeled]
+permissions:
+  contents: write
+  pull-requests: write
 concurrency: preview-${{ github.ref }}
 jobs:
   preview:
@@ -29,6 +32,8 @@ jobs:
         with:
           source-dir: ./site
           umbrella-dir: pr-preview
+          action: deploy
+          token: ${{ secrets.GITHUB_TOKEN }}
   cleanup:
     runs-on: ubuntu-latest
     if: |
@@ -42,3 +47,4 @@ jobs:
           source-dir: ./site
           umbrella-dir: pr-preview
           action: remove
+          token: ${{ secrets.GITHUB_TOKEN }}
