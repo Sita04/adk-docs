@@ -8,7 +8,7 @@
   <span class="lst-java">Java v0.1.0</span>
 </div>
 
-The `LlmAgent` (often aliased simply as `Agent`) is a core component in ADK,
+The `LlmAgent` is a core component in ADK,
 acting as the "thinking" part of your application. It leverages the power of a
 Large Language Model (LLM) for reasoning, understanding natural language, making
 decisions, generating responses, and interacting with tools.
