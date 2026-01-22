@@ -6,7 +6,7 @@ Callbacks offer powerful hooks into the agent lifecycle. Here are common design 
 
 These patterns demonstrate typical ways to enhance or control agent behavior using callbacks:
 
-### 1. Guardrails & Policy Enforcement { #guardrails-policy-enforcement }
+### 1. Guardrails & Policy Enforcement
 
 **Pattern Overview:**
 Intercept requests before they reach the LLM or tools to enforce rules.
